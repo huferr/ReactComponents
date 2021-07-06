@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './styles.css'
 
 const Collapsible = ({children, label}) => {
     
@@ -6,8 +7,11 @@ const Collapsible = ({children, label}) => {
     
     return (
         <div className='container'>
-            <button className='toggle'>{label}</button>
-            <div className='content'>{children}</div>
+            <button className='toggle' onClick={() => setIsOpen(!IsOpen)}>{label}</button>
+            
+            <div className={IsOpen ? 'content show' : 'content'}>{children}</div>
         </div>
     )
 }
+
+export default Collapsible

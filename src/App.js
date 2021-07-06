@@ -1,10 +1,15 @@
 import './App.css';
-import Tab from './components/Tab';
+import Collapsible from './components/Collapsible';
 
 function App() {
   return (
     <>
-      <Tab/>
+      <Collapsible label='Click Here'>
+        <ul>
+          <li>Profile</li>
+          <li>dashboard</li>
+        </ul>
+      </Collapsible>
     </>
   );
 }
