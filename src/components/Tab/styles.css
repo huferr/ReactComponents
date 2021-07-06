@@ -21,6 +21,7 @@
   align-items: center;
   background: #80808013;
   position: relative;
+  cursor: pointer;
 }
 
 .tabs:not(:last-child) {
