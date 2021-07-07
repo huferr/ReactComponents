@@ -4,46 +4,43 @@ import "./styles.css";
 const Tab = () => {
   const [ToggleState, setToggleState] = useState(1);
 
-  const ToggleTab = (index) => {
+  const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  const getActiveClass = (index, className) =>
+    ToggleState === index ? className : "";
 
   return (
     <div className="container">
       <ul className="tab-list">
         <li
-          className={ToggleState === 1 ? "tabs active-tabs" : "tabs"}
-          onClick={() => ToggleTab(1)}
+          className={`tabs ${getActiveClass(1, "active-tabs")}`}
+          onClick={() => toggleTab(1)}
         >
           Tab 1
         </li>
         <li
-          className={ToggleState === 2 ? "tabs active-tabs" : "tabs"}
-          onClick={() => ToggleTab(2)}
+          className={`tabs ${getActiveClass(2, "active-tabs")}`}
+          onClick={() => toggleTab(2)}
         >
           Tab 2
         </li>
         <li
-          className={ToggleState === 3 ? "tabs active-tabs" : "tabs"}
-          onClick={() => ToggleTab(3)}
+          className={`tabs ${getActiveClass(3, "active-tabs")}`}
+          onClick={() => toggleTab(3)}
         >
           Tab 3
         </li>
       </ul>
       <div className="content-container">
-        <div
-          className={ToggleState === 1 ? "content active-content" : "content"}
-        >
+        <div className={`content ${getActiveClass(1, "active-content")}`}>
           <h2>Lorem</h2>
         </div>
-        <div
-          className={ToggleState === 2 ? "content active-content" : "content"}
-        >
+        <div className={`content ${getActiveClass(2, "active-content")}`}>
           <h2>Ipsum</h2>
         </div>
-        <div
-          className={ToggleState === 3 ? "content active-content" : "content"}
-        >
+        <div className={`content ${getActiveClass(3, "active-content")}`}>
           <h2>Dolor</h2>
         </div>
       </div>
