@@ -1,4 +1,6 @@
-# React Components from my dev.to Articles!
+# React Components from my Articles!
+
+Check my articles at [dev.to/huferr](dev.to/huferr)
 
 ## Objetive
 
